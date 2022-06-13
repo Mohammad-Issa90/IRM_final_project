@@ -4,21 +4,26 @@
 
 
 # To use this code you have to log in to karora using ssh <yourSnumber>@karaora.let.rug.nl
-# after that you can excute the following command to compute how many times the words friet, frietje, frietjes was used in the south of the Netherlands. 
 
+ssh s1234567@karora.rug.let.nl
+
+# after that you can excute the following command to compute how many times the words friet, frietje, frietjes was used in the south of the Netherlands.
+# Please copy-paste this command to your terminal after logging in. This could take some time to get the output. Please be patient. 
 
 zless /net/corpora/twitter2/Tweets/2020/02/*\:*.out.gz |
  /net/corpora/twitter2/tools/tweet2tab text user.location |
   grep -E -i -w '^\t*.utrecht|gelderland|zuid holland|zuid-holland|noord brabant|noord-brabant|zeeland|limburg' | 
   grep -v 'patat|patatje|patatjes' | grep -E -i -w 'friet|frietje|frietjes' | wc -l
 
-# This command to compute how many times the words friet, frietje, frietjes was used in the north of the Netherlands. 
+# This command to compute how many times the words friet, frietje, frietjes was used in the north of the Netherlands.
+#Please copy-paste this command to your terminal after logging in. This could take some time to get the output. Please be patient. 
   zless /net/corpora/twitter2/Tweets/2020/02/*\:*.out.gz |
    /net/corpora/twitter2/tools/tweet2tab text user.location|
    grep -E -i -w '^\t*.friesland|fryslân|drenthe|noord-holland|noord holland|overijsel|groningen|flevoland'|
    grep -v 'patat|patatje|patatjes'|grep -E -i -w 'friet|frietje|frietjes' | wc -l 
 
 # This command to compute how many times the words patat, patatje, patatjes was used in the north of the Netherlands. 
+#Please copy-paste this command to your terminal after logging in. This could take some time to get the output. Please be patient. 
 zless /net/corpora/twitter2/Tweets/2020/02/*\:*.out.gz |
  /net/corpora/twitter2/tools/tweet2tab text user.location|
  grep -E -i -w '^\t*.friesland|fryslân|drenthe|noord-holland|noord holland|overijsel|groningen|flevoland'|
@@ -26,7 +31,8 @@ zless /net/corpora/twitter2/Tweets/2020/02/*\:*.out.gz |
  grep -E -i -w 'patat|patatje|patatjes' | wc -l 
 
 
-# This command to compute how many times the words patat, patatje, patatjes was used in the south of the Netherlands. 
+# This command to compute how many times the words patat, patatje, patatjes was used in the south of the Netherlands.
+#Please copy-paste this command to your terminal after logging in. This could take some time to get the output. Please be patient. 
  zless /net/corpora/twitter2/Tweets/2020/02/*\:*.out.gz |
   /net/corpora/twitter2/tools/tweet2tab text user.location|
   grep -E -i -w '^\t*.utrecht|gelderland|zuid holland|zuid-holland|noord brabant|noord-brabant|zeeland|limburg'|
